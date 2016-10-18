@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160920101146) do
+ActiveRecord::Schema.define(version: 20161004102933) do
 
   create_table "genres", force: true do |t|
     t.string   "name"
@@ -26,6 +26,18 @@ ActiveRecord::Schema.define(version: 20160920101146) do
     t.date     "released_on"
     t.string   "rating"
     t.integer  "genre_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.date     "dob"
+    t.string   "sex"
+    t.boolean  "regular"
+    t.string   "photo"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
